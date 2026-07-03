@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatismes du jour — Physique-Chimie</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap');
+
+:root{
+  --bg:#16242A;
+  --bg-2:#1E2F35;
+  --line:rgba(241,238,228,0.10);
+  --chalk:#F1EEE4;
+  --chalk-dim:#AEBBB8;
+  --teal:#5FC3B5;
+  --teal-dim:#3A8B7F;
+  --amber:#E8B84B;
+  --paper:#FBF8F1;
+  --paper-line:#D8D2C0;
+  --ink:#22344A;
+  --ink-dim:#5B6B80;
+  --red-margin:#C1503F;
+  --success:#4C9A6B;
+  --success-bg:#DCEEE1;
+  --radius:14px;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--chalk);font-family:'Inter',sans-serif;min-height:100vh;}
+.wrap{max-width:640px;margin:0 auto;padding:0 0 4rem;}
+.topbar{padding:1.4rem 1.25rem 1rem;}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;}
+.brand .bolt{color:var(--amber);font-size:20px;}
+
+.hero{margin:0 1.25rem 1.25rem;background:var(--bg-2);border-radius:var(--radius);padding:1.3rem 1.4rem;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle, rgba(95,195,181,0.12), transparent 70%);}
+.hero .date{font-family:'Caveat',cursive;font-size:22px;color:var(--teal);margin:0 0 6px;}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:600;margin:0 0 12px;line-height:1.3;}
+.chips{display:flex;gap:8px;flex-wrap:wrap;}
+.chip{font-size:12px;padding:4px 11px;border-radius:20px;background:rgba(95,195,181,0.14);color:var(--teal);border:1px solid rgba(95,195,181,0.25);font-weight:500;}
+
+.section{margin:0 1.25rem 1.25rem;}
+.label{font-size:12.5px;text-transform:uppercase;letter-spacing:0.6px;color:var(--chalk-dim);margin:0 0 8px;font-weight:600;}
+
+.paper-card{
+  background-image:linear-gradient(var(--paper-line) 1px, transparent 1px),linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+  background-size:22px 22px;background-color:var(--paper);border-radius:10px;padding:1.4rem 1.4rem 1.4rem 2.2rem;
+  position:relative;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+.paper-card::before{content:"";position:absolute;left:1.5rem;top:0;bottom:0;width:1.5px;background:var(--red-margin);opacity:0.55;}
+.paper-card .type-badge{display:inline-block;font-family:'Space Grotesk',sans-serif;font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--ink-dim);margin-bottom:8px;}
+.paper-card .enonce{font-size:16.5px;line-height:1.55;font-weight:500;}
+
+.photo-zone{border:1.5px dashed var(--line);border-radius:12px;padding:1.4rem;text-align:center;cursor:pointer;transition:border-color .15s ease;}
+.photo-zone:hover{border-color:var(--teal-dim);}
+.photo-zone .icon{font-size:26px;color:var(--teal);margin-bottom:6px;}
+.photo-zone p{margin:0;font-size:13.5px;color:var(--chalk-dim);}
+.thumb{width:100%;border-radius:10px;margin-top:12px;max-height:280px;object-fit:contain;background:#0e1a1e;}
+
+.btn{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14.5px;padding:11px 18px;border-radius:9px;border:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .1s ease, opacity .15s ease;width:100%;}
+.btn:active{transform:scale(0.98);}
+.btn-primary{background:var(--teal);color:#0C2621;}
+.btn-primary:hover{background:#6FD0C2;}
+.btn-primary:disabled{opacity:0.5;cursor:not-allowed;}
+
+.correction-card{background:var(--success-bg);border-left:4px solid var(--success);border-radius:12px;padding:1.1rem 1.2rem;margin-top:1rem;color:#1E4A31;}
+.correction-card .cc-label{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14.5px;margin-bottom:6px;}
+.correction-card p{margin:0;font-size:14.5px;line-height:1.55;}
+
+.hidden{display:none !important;}
+
+.level-picker{display:flex;gap:10px;}
+.level-btn{
+  flex:1;background:var(--bg-2);border:1.5px solid var(--line);color:var(--chalk);
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14.5px;
+  padding:14px 8px;border-radius:11px;cursor:pointer;transition:all .15s ease;text-align:center;
+}
+.level-btn:hover{border-color:var(--teal-dim);}
+.level-btn.active{background:var(--teal);color:#0C2621;border-color:var(--teal);}
+
+.progress-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.progress-dots{display:flex;gap:6px;}
+.progress-dot{width:9px;height:9px;border-radius:50%;background:var(--line);}
+.progress-dot.done{background:var(--teal);}
+.progress-dot.current{background:var(--amber);}
+.switch-level{background:none;border:none;color:var(--chalk-dim);font-size:12.5px;text-decoration:underline;cursor:pointer;padding:0;}
+
+.done-card{background:var(--bg-2);border-radius:12px;padding:1.6rem 1.4rem;text-align:center;}
+.done-card .big{font-size:30px;margin-bottom:8px;}
+.done-card p{margin:0 0 14px;color:var(--chalk-dim);font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand"><span class="bolt">&#9889;</span> Automatismes du jour</div>
+  </div>
+
+  <div class="hero">
+    <p class="date" id="dateLabel"></p>
+    <h1 id="heroTitle">Choisis ton niveau pour commencer</h1>
+    <div class="chips" id="heroChips"></div>
+  </div>
+
+  <div class="section" id="levelSection">
+    <p class="label">Ton niveau</p>
+    <div class="level-picker">
+      <button class="level-btn" data-niveau="2de">2de</button>
+      <button class="level-btn" data-niveau="1re">1re</button>
+      <button class="level-btn" data-niveau="Tle">Terminale</button>
+    </div>
+  </div>
+
+  <div class="section hidden" id="quizArea">
+    <div class="progress-row">
+      <div class="progress-dots" id="progressDots"></div>
+      <button class="switch-level" id="switchLevelBtn">Changer de niveau</button>
+    </div>
+
+    <div class="section" style="margin:0 0 1.25rem;">
+      <p class="label">La question</p>
+      <div class="paper-card" id="questionCard"></div>
+    </div>
+
+    <div class="section" style="margin:0 0 1.25rem;">
+      <p class="label">Ta réponse</p>
+      <div class="photo-zone" id="photoZone">
+        <div class="icon">&#128247;</div>
+        <p>Prends en photo ta réponse manuscrite</p>
+        <input type="file" accept="image/*" capture="environment" id="photoInput" style="display:none">
+      </div>
+      <img id="thumb" class="thumb hidden">
+      <button class="btn btn-primary" id="revealBtn" style="margin-top:14px;" disabled>Voir la correction</button>
+    </div>
+
+    <div class="section hidden" style="margin:0;" id="correctionSection"></div>
+  </div>
+
+  <div class="section hidden" id="doneArea">
+    <div class="done-card">
+      <div class="big">&#127881;</div>
+      <p>Bravo, tu as terminé les questions du jour pour ce niveau !</p>
+      <button class="btn btn-primary" id="doneSwitchBtn">Changer de niveau</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/*
+  BANQUE DE QUESTIONS
+  --------------------
+  Pour ajouter une question, copiez un bloc { ... } et modifiez le texte
+  entre guillemets. N'oubliez pas la virgule à la fin de chaque bloc,
+  sauf le tout dernier.
+
+  type      : "formule", "calcul" ou "definition"
+  theme     : le chapitre concerné (affiché en haut)
+  niveau    : "2de", "1re" ou "Tle"
+  enonce    : la consigne donnée à l'élève
+  reponse   : la réponse affichée pour l'autocorrection
+
+  L'appli choisit automatiquement une question différente chaque jour
+  en tournant dans la liste, dans l'ordre où elles sont écrites ici.
+*/
+const QUESTIONS = [
+  {type:"formule", theme:"Mécanique - forces", niveau:"1re", enonce:"Écris la deuxième loi de Newton (relation fondamentale de la dynamique) et précise l'unité de chaque grandeur.", reponse:"ΣF = m·a, avec F en newtons (N), m la masse en kilogrammes (kg), a l'accélération en mètres par seconde carrée (m/s²)."},
+  {type:"calcul", theme:"Électricité - loi d'Ohm", niveau:"2de", enonce:"Un conducteur ohmique de résistance 220 Ω est traversé par un courant de 0,25 A. Calcule la tension à ses bornes.", reponse:"U = R×I = 220 × 0,25 = 55 V."},
+  {type:"definition", theme:"Optique", niveau:"2de", enonce:"Donne la définition d'une lentille convergente.", reponse:"Une lentille convergente est une lentille plus épaisse en son centre que sur les bords, qui fait converger (rapproche) un faisceau de rayons lumineux parallèles vers un point appelé foyer image."},
+  {type:"formule", theme:"Chimie - quantité de matière", niveau:"1re", enonce:"Écris la relation entre la quantité de matière n, la masse m et la masse molaire M.", reponse:"n = m / M, avec n en moles (mol), m en grammes (g), M en grammes par mole (g/mol)."},
+  {type:"calcul", theme:"Mécanique - énergie", niveau:"Tle", enonce:"Calcule l'énergie cinétique d'un objet de masse 2 kg se déplaçant à 5 m/s.", reponse:"Ec = ½×m×v² = 0,5 × 2 × 5² = 25 J."},
+  {type:"definition", theme:"Ondes", niveau:"Tle", enonce:"Donne la définition de la période d'une onde périodique.", reponse:"La période T est la durée au bout de laquelle le phénomène se reproduit identique à lui-même ; elle s'exprime en secondes (s)."},
+  {type:"formule", theme:"Électricité - puissance", niveau:"1re", enonce:"Écris la relation entre la puissance électrique P, la tension U et l'intensité I.", reponse:"P = U × I, avec P en watts (W), U en volts (V), I en ampères (A)."},
+  {type:"calcul", theme:"Chimie - concentration", niveau:"1re", enonce:"On dissout 0,5 mol de soluté dans 250 mL de solution. Calcule la concentration molaire.", reponse:"C = n / V = 0,5 / 0,250 = 2 mol/L."},
+  {type:"definition", theme:"Mécanique", niveau:"2de", enonce:"Donne la définition du principe d'inertie.", reponse:"Dans un référentiel galiléen, un objet soumis à des forces qui se compensent (ou à aucune force) est soit immobile, soit en mouvement rectiligne uniforme."},
+  {type:"formule", theme:"Optique", niveau:"1re", enonce:"Écris la relation de conjugaison des lentilles minces (formule de Descartes).", reponse:"1/OA' − 1/OA = 1/f', avec OA' la distance image, OA la distance objet, f' la distance focale."},
+  {type:"calcul", theme:"Ondes - son", niveau:"Tle", enonce:"Une onde sonore parcourt 340 m en 1 seconde. Calcule sa célérité.", reponse:"v = d / t = 340 / 1 = 340 m/s."},
+  {type:"definition", theme:"Chimie - réaction", niveau:"2de", enonce:"Donne la définition d'un réactif limitant.", reponse:"Le réactif limitant est le réactif totalement consommé le premier lors d'une transformation chimique ; il détermine la quantité maximale de produits formés."},
+  {type:"formule", theme:"Mécanique - poids", niveau:"2de", enonce:"Écris la relation entre le poids P, la masse m et l'intensité de pesanteur g.", reponse:"P = m × g, avec P en newtons (N), m en kilogrammes (kg), g en newtons par kilogramme (N/kg)."},
+  {type:"calcul", theme:"Électricité - association", niveau:"1re", enonce:"Deux résistances de 100 Ω et 150 Ω sont en série. Calcule la résistance équivalente.", reponse:"Réq = R1 + R2 = 100 + 150 = 250 Ω."},
+  {type:"definition", theme:"Thermodynamique", niveau:"Tle", enonce:"Donne la définition de la température en lien avec l'agitation thermique.", reponse:"La température est une grandeur qui traduit le degré d'agitation thermique des entités microscopiques (atomes, molécules) qui constituent un système : plus l'agitation est grande, plus la température est élevée."},
+  {type:"formule", theme:"Chimie - pH", niveau:"Tle", enonce:"Écris la relation entre le pH et la concentration en ions oxonium [H3O+].", reponse:"pH = −log[H3O+], avec [H3O+] en mol/L."},
+  {type:"calcul", theme:"Mécanique - vitesse", niveau:"2de", enonce:"Une voiture parcourt 90 km en 1,5 h. Calcule sa vitesse moyenne en km/h.", reponse:"v = d / t = 90 / 1,5 = 60 km/h."},
+  {type:"definition", theme:"Ondes - lumière", niveau:"1re", enonce:"Donne la définition de la longueur d'onde dans le vide.", reponse:"La longueur d'onde λ dans le vide est la distance parcourue par l'onde pendant une période T ; elle s'exprime en mètres (m), souvent en nanomètres (nm) pour la lumière visible."},
+  {type:"formule", theme:"Mécanique - travail", niveau:"Tle", enonce:"Écris l'expression du travail d'une force constante colinéaire au déplacement.", reponse:"W(F) = F × d, avec W en joules (J), F en newtons (N), d en mètres (m)."},
+  {type:"calcul", theme:"Chimie - dilution", niveau:"1re", enonce:"On dilue 10 mL d'une solution mère 5 fois moins concentrée. Calcule le volume final de la solution fille.", reponse:"Cmère×Vmère = Cfille×Vfille, donc Vfille = 5 × 10 = 50 mL."}
+];
+
+const MAX_PER_DAY = 5;
+const typeLabels = {formule:'Formule', calcul:'Calcul', definition:'Définition'};
+
+function todayHuman(){
+  return new Date().toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long'});
+}
+document.getElementById('dateLabel').textContent = "Aujourd'hui, " + todayHuman();
+
+// Choisit jusqu'à 5 questions différentes pour aujourd'hui, dans le niveau donné,
+// en tournant chaque jour dans la banque de questions de ce niveau.
+function getTodayQuestions(niveau){
+  const pool = QUESTIONS.filter(item => item.niveau === niveau);
+  if(pool.length === 0) return [];
+  const epoch = new Date(2026, 0, 1);
+  const now = new Date();
+  const days = Math.floor((now - epoch) / 86400000);
+  const start = ((days % pool.length) + pool.length) % pool.length;
+  const count = Math.min(MAX_PER_DAY, pool.length);
+  const result = [];
+  for(let i = 0; i < count; i++){
+    result.push(pool[(start + i) % pool.length]);
+  }
+  return result;
+}
+
+let todayQuestions = [];
+let currentIndex = 0;
+
+const levelSection = document.getElementById('levelSection');
+const quizArea = document.getElementById('quizArea');
+const doneArea = document.getElementById('doneArea');
+const heroTitle = document.getElementById('heroTitle');
+const heroChips = document.getElementById('heroChips');
+
+document.querySelectorAll('.level-btn').forEach(btn => {
+  btn.addEventListener('click', () => startLevel(btn.dataset.niveau));
+});
+document.getElementById('switchLevelBtn').addEventListener('click', showLevelPicker);
+document.getElementById('doneSwitchBtn').addEventListener('click', showLevelPicker);
+
+function showLevelPicker(){
+  todayQuestions = [];
+  currentIndex = 0;
+  levelSection.classList.remove('hidden');
+  quizArea.classList.add('hidden');
+  doneArea.classList.add('hidden');
+  heroTitle.textContent = 'Choisis ton niveau pour commencer';
+  heroChips.innerHTML = '';
+}
+
+function startLevel(niveau){
+  todayQuestions = getTodayQuestions(niveau);
+  currentIndex = 0;
+  levelSection.classList.add('hidden');
+  doneArea.classList.add('hidden');
+  if(todayQuestions.length === 0){
+    heroTitle.textContent = "Pas encore de question disponible pour ce niveau.";
+    return;
+  }
+  quizArea.classList.remove('hidden');
+  heroTitle.textContent = "C'est parti !";
+  heroChips.innerHTML = `<span class="chip">${niveau}</span><span class="chip">${todayQuestions.length} question${todayQuestions.length>1?'s':''} aujourd'hui</span>`;
+  renderProgressDots();
+  renderQuestion();
+}
+
+function renderProgressDots(){
+  const dots = document.getElementById('progressDots');
+  dots.innerHTML = todayQuestions.map((_, i) => {
+    let cls = 'progress-dot';
+    if(i < currentIndex) cls += ' done';
+    else if(i === currentIndex) cls += ' current';
+    return `<span class="${cls}"></span>`;
+  }).join('');
+}
+
+const photoZone = document.getElementById('photoZone');
+const photoInput = document.getElementById('photoInput');
+const thumb = document.getElementById('thumb');
+const revealBtn = document.getElementById('revealBtn');
+
+function renderQuestion(){
+  const q = todayQuestions[currentIndex];
+  document.getElementById('questionCard').innerHTML = `<span class="type-badge">${typeLabels[q.type]||q.type} · Question ${currentIndex+1}/${todayQuestions.length}</span><p class="enonce">${q.enonce}</p>`;
+  thumb.classList.add('hidden');
+  thumb.src = '';
+  photoInput.value = '';
+  revealBtn.disabled = true;
+  revealBtn.textContent = 'Voir la correction';
+  document.getElementById('correctionSection').classList.add('hidden');
+  document.getElementById('correctionSection').innerHTML = '';
+  renderProgressDots();
+}
+
+photoZone.addEventListener('click', () => photoInput.click());
+photoInput.addEventListener('change', () => {
+  if(photoInput.files && photoInput.files[0]){
+    thumb.src = URL.createObjectURL(photoInput.files[0]);
+    thumb.classList.remove('hidden');
+    revealBtn.disabled = false;
+  }
+});
+
+revealBtn.addEventListener('click', () => {
+  const q = todayQuestions[currentIndex];
+  const isLast = currentIndex === todayQuestions.length - 1;
+  document.getElementById('correctionSection').innerHTML = `
+    <p class="label">Corrigé</p>
+    <div class="correction-card">
+      <p class="cc-label">Compare avec ta réponse</p>
+      <p>${q.reponse}</p>
+    </div>
+    <button class="btn btn-primary" id="nextBtn" style="margin-top:12px;">${isLast ? 'Terminer' : 'Question suivante'}</button>
+  `;
+  document.getElementById('correctionSection').classList.remove('hidden');
+  revealBtn.disabled = true;
+  revealBtn.classList.add('hidden');
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    revealBtn.classList.remove('hidden');
+    if(isLast){
+      currentIndex++;
+      renderProgressDots();
+      quizArea.classList.add('hidden');
+      doneArea.classList.remove('hidden');
+      heroTitle.textContent = 'Terminé pour aujourd\'hui';
+    }else{
+      currentIndex++;
+      renderQuestion();
+    }
+  });
+});
+</script>
+</body>
+</html>
