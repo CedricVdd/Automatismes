@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#16242A">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIkF1dG9tYXRpc21lcyBkdSBqb3VyIOKAlCAybmRlIiwgInNob3J0X25hbWUiOiAiQXV0b21hdGlzbWVzIDJuZGUiLCAic3RhcnRfdXJsIjogIi4vMmRlLmh0bWwiLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgImJhY2tncm91bmRfY29sb3IiOiAiIzE2MjQyQSIsICJ0aGVtZV9jb2xvciI6ICIjMTYyNDJBIiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTUFBQUFEQUNBSUFBQURkdnZ0UUFBQVRTVWxFUVZSNG5PMmRiYXdkeFhuSG4yZG1kdmU4WGZ2YTF6WTJKallHWTJOVUl3ekV4ZVV0aHZBU1hKbWdsa1lKVWdLMEtLVUtDUlY1VVQvMGM5V0txa3JVS3FyeUlVMmtKS3JVcUlVSVNoVUpJcUEwb2lKUm13aU1RQ1ExRGpqQndUYSt2dWVjM1psNSttR3VEL2Y5bnJNenV6dHoyTjhIWTFuY1BYdDMvdWVaWi83enpMTzRhZWRsVUZPVEYxYjFEZFNFVFMyZ0dpdHFBZFZZVVF1b3hvcGFRRFZXMUFLcXNhSVdVSTBWdFlCcXJLZ0ZWR05GTGFBYUsyb0IxVmhSQzZqR2lscEFOVmJVQXFxeG9oWlFqUlcxZ0dxc3FBVlVZMFV0b0JvclJOVTNVQ1hJR0FBZ0l1Tjg5bDhRR1Z2cFM2VzFKcUxadnl0bC9rNWFGM3luL3ZMQkVwRFJ5a0F4QTkwTUQ1OHJyeWd5LzlWS3dUazlEVlQxQVdIOEJZU01JV09jYzhZWUlnS2k4NCtZSjBjaUl0SmFLNlZJNjdFUFRtTXJJTVk1NDV3eGxpUE1XSUdJaUp3eExnUUFhS1cwMWxvcEU2WEdqM0VURURMR2hlQ2M0NHFwVEdrWUhVTVVrZFpLS1NYbG1NV2tNUkVRSW5JaFprZkxTNUF4d1ppSUloT05sSlRqa1NvRkw2RFprQ01FRnBEY3JBb0JLQTFpbEdCblZNNmpTRWs1QmdISml6aWZEMlFzU3BLazBSQlJWSWw2QUlBaDdEeVA1d2dsaUNpaUtHazBvaVR4WkxiTlI1QzNQaXVkWnBNTFVjU3Fha2hTQ2Z0M3hwLytTQ3VWZVNjalJDNUUwbXlHSzZQQWJucWVkQ3BGRTdRVCtQSmRFLy8xYW1xdjRYQmxGRXdPaEloTWlDaUtLZ3c1YzhrazNYMmd0V2VyZUhmYVdTNXMxbzlabHVsd1V1d3dCTVE0aitMWW4yOW5wbURuWnZIUUhaMU1BYmpWTTJJVXh5UkVscVpCV0VlK0N3Z1JSWkp3bnhibkJJQkFYNzVyWXVNYTl0cHhkZVJZSnJqam9JaU14WTJHVWtyMis1NkhJbCsrMDB2Q2hZaWJUYS9VQXdCcFJnZC9Kem13SzA0VlpKSzZLUlUwcDNMT1l3K3l2Wlh4OU9iTUtwZWYyNjMwQjZWaDQxcjJwWSt2WWN6c2VoV2JraUZpbENTTU1abGxmb1lpSHlPUUNlQWVxZ2NBcEtLSEQwM3MyTVNsQXNIeGhWZjdNMzBxT3EzblVSUTNHdjZrZ0hQeDdwNjRFSW12RDZ1WDBxMVhOTzdjMytobEJBQUlNSk9TTGlVdUlHTkpvK0hoZE9iWE9FVkpFaVdKSnd2MUJSQkJ1NEgzSG14eGhtWXlVUnArZTBhWGQ3T0lzOC9ISjN3UmtKbnNQZnlHRGVobGRQL043YXN2am8zdmpBamRsRjU4TFJXc1ZMbHpJYUlrcVdyclpqRmVEQmhqTEdvMC9Ia29pMGtsWFgxeGZQOU5iVE41R1JnQ3IrSUxhT29Pc2w1UGU3QVJXMzBFUXUvVlF3U2M0YjBIVyswR0RsWkNpSEM2cTB2SW9KY0VFU00vTXNXSzc4QXN1SHhXRHdEME1ycHpmK1BXS3hxOTlQM3dJeGkrOXBZOGRrSlZFb1FBQUJGOVdKcFYrZkVzQlBWSUJUczI4WWNQVFVpMWNMbkZlY1hwdnRIUXlzZElpcWF5ei9aLzVqSW9vbnR1Yko4M3lkVDhmQU1SM2ptdEsvZjJLcC9McXZuZ0lHWXVBT2huZFAyZTVGUFh0ZVpPWGdaRWVPSFZ0QndUYUdXcW5jc3ErTlFnWmk0QVVCcldkZGhYN3BwZ3VFU2dRUnl0a3JWUUtwekx5djdJMlpEcnZYb0FRQ3A2Nkk3T3pzMGlXMVJWZ1FqOWpFNmVMZEZGWEkycUhtelpBaEp4SElSNk1nbDdMaENIUDl6TWxpcFhaUWp2VHV2LythVjBYc2hoQXlLS09DNzVRMHNWa09kZTh3QWlpQVQ4eFIrc2FTZXdYSmJEV1RVdTRzb1luN3JNVHl6dkdaakRONlY5bkEzOWpPNDkyTjYvTTA3bDB2OEQ1M2prbUR4OVZwZTdqVEVVSlQvbmtnUmtpdUhMK1N4THBJTHoxL05QWHQ5VXl5K3hHTUx4azVYWjBLdFNabkYrR1IrRGlIRWc2Z0VBcmVtTGQzWTJUM0s1WWtWeVZPV0JvdFdKeTlwd0xVTkFQSW9xZDl5SHBKdlM0ZjNOMi9jMVZqN3FwUWwrOGtibXM0Q1FzWElxOGdvZlZ5NkU4TEsyY0RGUzA0VWJ4ZWNQZFFCZ1pZdVpDUDd2SGVXemdBQkFSRkVKeVZDeEFrTEd5bDlZNWlhVGNNOE5yVzBiVnBtOEFBQVJJcjhxL1pkR0ZIOFdxdGlyUjRHNFBnRFF5K2phUytNL3VyYTVlTmRpQVp6QjhaUHFGNytSM01NMTJId1FNU3I0QzF5Z2dIeHV0cklBcldGOW16MXllS0lSNGFyYlc0andYcGRPblBGeERiK1lva2VoS0FHVm9IMkg5Q1VkM3QrOGZIczBaSnNFcVlvNkMxWUVoYzREUlFtSUN4SEt5aXVUZE9uVzZMTzN0dnZEcVNmaStQd3I2VXpxcVFtMEdEelhiNjhJQ2huamdISm5JaEFjdjNoblozMkhEVjlobklYV2liVzRiTHFRaTRheWJnZUFma2FmdUs1NS9aNGt6WVpWQkJFc3VjUHFPUVVOaW5zQm1aNjZ6aTliQkVyRGVaUHNUMjV1RHg5UUVHRW1wZWVQcEpGUCsvRERVRkRqVWZkWEZONjA4RmtWcWVnTGh5Yk9tK1FqOVZFSk5BSUJZaEZCeUxHQUt1akxuSmQrUnJmdmF4emUzeHkxUVozVW9Lby9qNVVIMHpqYjhUWGRYbzVYMSs5eUpEUkJPMkVQM3RZV2JMUjBPT0w0eXB2cDBYZWtDT05yTWc5RWRMNUI1bEpBaFM0WDNkSkw2ZjZQdG5hZEh5MVg4Yk1DR2tLTlFGQ0F2ZUx5V3FHb0o1WHd1NWZFbjc2eEpVYy9WSUVJUjk5UllhM2hGK0IybU53SkNER0l4UmNSTUtRL3ZhMnpwam1DOFRNQUVYN3lSdWJEYVo3Y2NLY0hJcDBKS0JUcnVaZlNIeDVvSGRnZDk0WTJmdWFDQ0ZFWWNYWlozR1lhN2dRVVF2akpKT3pjSWg2OHZRMlFVejB6ZlRwK01veHQxQlZ3T0ZodUJHVGV5ZVhrVXNWQkJCR0h6eC9xYkZtM2VzWFBrakNFMDJmMWtXT1NoK1lpTHNEaGVMbTVTbFh2T2htSlhrWWYyWnQ4YkY5ajFZcWZGZUFjUWdpMXEyQmVidVRrVWk0RUZFTDZyRFJzV3N2KzdMWk9qcFhYQU04UFk0eUVxMVRhZ1lDWTkvTVhBUkRSWjIvcDdQbVF5RGQ1R1h3K0RqWXF5SmdUVjlyRkpid1BQMmxHbDIrUFAzSGQ2dVdxcStMNWFaNlJjREp3YmlLUS9VV0tReE0wWTN6b1VEdmlTM1haR0lVZ0RtTU1qeGNSeUZVa0xJNVUwajAzdEs3ZG5lUi9xOWM1L0Q4T05oSk9jZy9ybjJmTTU1aWVLZHE3TFhyZ2xrNjZxRUZkRGhBaHhEM1VaVUcwLy9KYi83ekhDUkFSSU9DZi8zNW5zbzMyRFhFNWcyTW4xR3R2eVpJYlF4ZUsvZkJaQ1FnUmZWNS85VEs2NDZyRy9sMXhQOWV1eFFLTURYMjY2MUZUS1h1UU1Vc0R6em9IOHZWeEtnM2JOdkF2SE9vd3RNMmRCM0FHWXhSOUFGd01uNVdBR09mZUNpaVY5T0R0blcwYitPTDJ2UGtRREY5OFBlMkdjNXBuR0JEUmNoYXpuY0pzZnJ3NCtobGRlMmx5Kzc1R3ZpMzNKVUdFRTJkMHVLVmt5MUhsRk9abkJxMDBUTGJaSTRjNzdjVFo1R1h3cHkyclF5d0hNZkRhbHFXUWl1NjdxWDM1aFZHMzd6TDhkRk42N3VWK0pnRnpsWUtzQUFFSURzR2RFekxncHAyWDVmeEp4cEptMCszZDJOUFA0TXFMeERjL3R4NXhsUjQvbzBJRXoveThmN1pQYnZOb0FvZ0Z2UG9yK2UwZnpWU1ZFZlM3WGNycmM0eFZCQ0tDUmdRUDNOSkpJblN5ZEo4TEluenN5b2J6TVdZSVdzUERQenVWS1lwRmVFRW92NEE4ektCVFNaKzZ2blhUM3NSKzAzUkpuSXNTQUpJSXYvUGN6Sk12OVJweFpjOFRFWFAvWXZuVFF0OHk2RXpCOW8zaW9VT2RnSTZOUmh4ZVB5Ny8vc25wcU5MWVl6T1VZN0t1SUFBZ3V1L20xdnJPd3RmcWVBc0NhTUsvL3Rjeko2ZTFoejNMaHlUWUc1OVBsc0ZOZTVPN0Q3U0ttR1VLb2hIajk1NmZlZTZWZmhKNWx3d01UMzRCK1pNREtRMlRIZnpTeDljQUJOTzJKeEo0NUZmWjE1K2FqanpZSExFWlNvc2N5SnR0Vktub2s5ZTFMdHlVODZ4RitTQ0NWUFRvWTlQdlRtc2ZucUxOVUhwdyszYWtrcTdZRWYveFIxdkRkNGlxbkVhTS8veDg5N2xYK25ISWs1Y2hiQUVSUVRQR3I5elZhY1VzbE9QR2tZQlhqc2wvL09FMFo5NGtBUmFFTGFCZVJ2ZmQxTDdxb3RpK1hMVWNFQ0dUOEhjL09QUE82WUJYWG5NSitKZVFDblpzRW5mL1hpc1U5UUJBTFBCZmZ0eDk1bWY5Q20xRHQ0UXFJQ0pBaEVjT2Q3YXNDOGI0OGNRMmRFdW9BdXFsZE9lSEc3ZGVZWFZPdVV6R3d6WmNUSkNicVZyRHhyWHNNd2RiSmc0NW9XZ0RxUkhqdDM0VXZHMjRtQ0FGSkRVOWNFdm5raTFSMTFINElRSmU1UEVrcjJ4RHQrU3ZCMHFhemFxT1pDREFCUnM0ZDFUWnBRazZEWHowTTVPYkp3dEpwNHd1UC9lTlU4Kys3R240SWEzNzNXNituODBmZ2JUV3ZDSUJFY0F2ZnFOY0ZRYW1rZzdzaXJlc2MxWit2NEJHak45NmVzWm4yMUJibkpyTEw2QnF0NTBjbGlkcmdyaXc1c1JCMklZMlF6bEc2NEc4YUEwM1hwWVVzVElhUDl0d01XUDZhNDBDRWJTU1FxSkRFdUgzZjl4OWVveHN3OFhrRjVBZTZRVVR2cUlKMXJiWjdxMUN1VTZBR2hHK2NDVDltMzg3NDJmaVBCZWJvY3d2b0dCS2IxYUVDQm94YnA1MHZCZkxHSnlhb1VjZlA5UFBISi9pS0lJNkI4cVBWSFQ1ZHJHMjdWaEFNY2R2L0hENjUwZXpFQTlhaklSRkJOSjZER1l4SWxqVFpFbms4Z3hyRXVFTHI2YmZlWFltQ1BWb3BYSWZDb002QWpHRTNWdUZmZmVnQVp6QnFiUDZieDgvMDAwRG1MenNzUkxRR0VRZ0FOaDF2bkFZZmdUSGJ6NDk4NysvelB6UG5RMldnMmdsb05EemFLVmg4enErYllOUWpqS2dXTUNMcjZmLzlNelpnTmJ0bG9Ob0c0R0MxaEFSZEJvNE5lRW1nMllJMHozNHErKy9sMG1mMjBiT2c0aXFqRUFRZUJEU0JGdW51Q3VQT0ludzYvOHgvZktiTXFEWCtkZ1BuKzBVWnBQQVY0N1N0SGQ3MUhTeEJHdEUrSjlIMHU4OU4rUHRqdW1Ta05aVlRtRVFlQjdORUZveDJuOERCclpoTHdUYmNDNzJ3MmN0SUswTEwrWXJCdU5CSDlpZDJGZHhoR29iRXRrVWNoaXNjeUN0N1craUVvaGdiWk4xR3JielYxaTI0VnkwMXZZWmlJTUVNbEFCU1UwN3Q0aXRVOXltQ2pGbzI5REp3TGtRVUxCcFVDeHN3MDl3dHVGY25BeWNtd2dVNGxwTWE3amhzdGhtRFIraWJUakFWZTdod2dNaFVnRUdJYzVnWFlmbGprQWgyb1p6VVVvNVdmMjRNZEdVbEdFNWlrckQxQnErYjBlVWV3a1dvbTA0Z0lpVWxFNHU1VVpBRk9Bc3hqRC9peThDdFEwSE9Cd3ZaK1VjWWMxaVV0R1ZGMFhyMStSWmdvVnJHdzV3T0ZqdUJDUmxRRUdJQ0pJSW8xeS9mYWkyNFRsSWExZnpGN2dzS0FzcWxXWUkrM1pFT1RiaHc3VU5CN2hLbncwdUt4SWQ2cm9FdG0zZ296N0dvRzNEQVc2SHlhV0EzTWJHNGxBYUx0akFMOW9zNUlnaEtHamIwT0E4MDNCY0U2Mnl6UC8xdkVtQTFqUkhNNEdDdGcwTlJLU3l6TzAxSFF0SWgzQlVReE5jc2tXTTlIcWwwRzFEZzFiSytjYWwrMU1aTXNzOEwvQXcyNmlKR09FMmc3WU5aeUdTcnNNUEZDRWcwdHJ6NVpoZ3NHNlVrNFNoMjRZR1pYZithemtLT1JkV2hOSmRZUktncXkrT2g4eWd4OEEyTkJRMEtJVUlpTFNXYVZyRWxlM1JCQnNtMkVSejJFS08wRzFEZzB6VGdtemVvazZtZW10TUswM2JONHJONjRiYXhCZ0QyeEFLdGxlS0VoQVJaYjRHb2Zad1phempZUnNDUUphbXhYa3JCWjZOMTBwNXVLUlhHcTdmTTFRL3NqR3dEYUg0VVNpMnVVS2gyczhCRVNRQ3B5Wld0eERId0RhRVV1YUJZZ1hrV3phdENkWjEyTjd0WXVVNnN2R3dEYUhJM0hsQTRlMWRsSlJlcmVvRmgxVWxNUTYySVlETXNoSzJKc3ZvRDZTeXpKTVZXU2JwNm92anFSWHJ5TWJETmlTdG5XOTdMVWtaQWlLaXROOHY0WU9HZ2JPVktsbkh4alpNKy8xeXNzK1NPcFNSMXBrSEdtSUlCM2JIS3p6WVdJeURiWmoxKzZXRi9QSmEzQ2twSzY4V1lnaWIxaTY3QklzRlB2dHkvN3VCMjRZbFArZFNleVJtL1g2RkdsSUtQclNSN3pwLzZhTThnc1B4VStvdnYvdGVUK1kvclZFNVNzcVNJMzNaVFRabGRjNFFBUWlPelFpWC9Iakc4TkhIcG8rZlVoRXYrOFpjUVVUbG15WmxDNGlJc2w2dkVnMHBUWmR2ajViczZOdU04ZkgvN2o3MTAxNjRrMWRWRDdhQ05yOWE2N1NLWDFVUmJKM2lpd09NNEhqMGhQcmFFOU1Bb2RxR1JKVDJlcFcwU2Fub2hWK2xhNGdJV2pGZWRWR2N6UzhEUWdRQSt1b1QwMitlVUNMTXljdW9weXFucmJKRzQ2UjF5U0VYRWFZV2RWTm9SUGprUzcwblgrbzF3clFOWjJldTZuemFLanZWbHptWGFZS3Q2L202K1IxOUJZYzNmNnUrK3NRMEFJVTRlVlU0Y3cybytGVUhwYzFsU3RQbVNUNDF3UVpQMnlqbWEwOU1IejJoeENnbk5EeWgycGxyUVBYdnlpaG5MaU9DcVlsNXYyd3M4S21mOWg1L3Nkc01zR0NqOHBsclFQVUNBak9YZGJ1RmVveGF3elc3NG9GREtEaThmVkk5K3RnMEM5QTBWRkttM2E0bnJTbTlFQkNZcjFSaFByVjVxZVdtdGU4blFNWTJmUHRrZUNzdjR6WDdVNmJuaTRBTVdiK2Y5ZnZPenlWcWdqVXRkdW01OTFxR2Foc1N6VDRmbi9DdVlrcEpxYldPa3dUZHZaU2VDSm94TXB6ZHpRalJOaVN0MHhMMzJJZkhyd2hrTUVzemgvVlFVdEVWTzZLcE5hYWZTM2kyb2NveUh4WmNTK0tqZ09CY05iaXJ5UjRCemx2TGlNS3pEVTFxNk52WmhMbDRONFhOUlVtcGxSSkp3cmxWdUdBTXJ0a2Rjd1pIVHd4c3d3QUVwSlNTUHVYTFMrSzFnT0NjNGFFNGorSTRkMWJFR1FnR1FMTzJvZi9HRDJtZHBhbUhwK29XNDd1QURGcXB0TmRqUWtSUk5HcnFLeFZjdUVuczJ4SC80S1Z1QUxZaFVaWmxPcHkrMjJFSUNNNTExOUpLaVNqaVlyVGJqZ1QrK3JUMjN6WTBSNkQ4VEphWEl4Z0JHVXh4dnN5eTRXVWtOVjJ6Sy82SGY1OSs2MTNsN1NIbEVLVmpDRXhBaG5reTRuemxTUzBXK01LUjlPMlR5a2Zia0VncEZhaDBERUVLeURBckk4YTRFRnlJNVJaV0RPR05YMHVHZnRtRzVtMFYzamJCR1o2QUJXUXd4KzlWbG5FaEdPZHNxUVcvcS9jeU84RzB5d2p1OVRUTEVieUFER1E2U0dZWm1vREV1Y09kRUNlWTFwRmpFSElXTUNZQ0dtQUNrZ1F3MFlneHRtUk1LZzNUV2RmUFZrbE9HRGNCRFJpTUdUS0dqSEhPR1dPSXhhZENSRVNrdFRaZFVjY3MzaXhtYkFVMHdJeWlsaElBRUpGeGJ2NEVBRmZCeVNoVkswVkU1azhubHcyQzhSZlFYTjUvVTErV0FZREprd1o2bXYzN2lzbVQxbnFnajRGV3hqN01yTUFIUzBBTE1BTlBJYjk0dW5MOFdxclVCRWN0b0JvcmFnSFZXRkVMcU1hS1drQTFWdFFDcXJHaUZsQ05GYldBYXF5b0JWUmpSUzJnR2l0cUFkVllVUXVveG9wYVFEVlcxQUtxc2FJV1VJMFZ0WUJxcktnRlZHTkZMYUFhSy80ZjZxNTVVRnVVUW5NQUFBQUFTVVZPUks1Q1lJST0iLCAic2l6ZXMiOiAiMTkyeDE5MiIsICJ0eXBlIjogImltYWdlL3BuZyJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWdBQUFBSUFDQUlBQUFCN0drT3RBQUFSaVVsRVFWUjRuTzNkVFc0c1I1S0YwVlJCQXdGdnJoVm9wQVgwMW1vTnRiVmVTczhGMUxBSEtWQjhaUDVHZUlTNzJUMW5BU3FxNkc2ZlJXUVMrdVgzUC82OEFKRG5YN04vQUFEbUVBQ0FVQUlBRUVvQUFFSUpBRUFvQVFBSUpRQUFvUVFBSUpRQUFJUVNBSUJRQWdBUVNnQUFRZ2tBUUNnQkFBZ2xBQUNoQkFBZ2xBQUFoQklBZ0ZBQ0FCQktBQUJDQ1FCQUtBRUFDQ1VBQUtFRUFDQ1VBQUNFRWdDQVVBSUFFRW9BQUVJSkFFQW9BUUFJSlFBQW9RUUFJSlFBQUlRU0FJQlFBZ0FRU2dBQVFna0FRQ2dCQUFnbEFBQ2hCQUFnbEFBQWhCSUFnRkFDQUJCS0FBQkNDUUJBS0FFQUNDVUFBS0VFQUNDVUFBQ0VFZ0NBVUwvTy9nRmd2TjkrL0JqK3ovenZYMzhOLzJmQ1hBSkFQVWZNOS8zL293cEJPUUxBMHFiTSttMXUvcWlxd01vRWdJVVVHdmN2K3Y1dkpBbXNRd0NZcWQvRWYrckx2N0llTUpFQWNMYkFvZi9BNS84M3hJQ1RDUUJuTVBSZklRYWNUQUE0aXFHL2h4aHdBZ0ZnTUhOL3VJLy9TNVdBc1FTQUFRejljM2dzWUN3QllEdHpmeUtQQmV3bkFMek4zRitLRXJDWkFQQUdvMzlsMTkrT0RQQTZBZUE1Yzc4UUR3UzhUZ0M0eTl3dlRRbDRTZ0M0d2VqdnhLc2g3aEVBZm1MMGR5VURmQ2NBWEM3bWZnenZoZmhNQU5JWi9aazhFSEFSZ0dSR1B6SVF6bjhVUHRGdlAzNlkva2Y3My8vOFB2dEhlSlh6RU1zVFFCYjMvQnlGcHY4SFR3T0JCQ0NGMGM4clpDQ0tBUFJuOUorczR2ci9oUXlFRUlET2pQN3pmVXovLy9uMy84MzlTZmFUZ2ZZRW9DZWpuMUZrb0RFQjZNYm9uNmpCeTU5N1pLQWxYd050eGZUblVBNVlNNTRBbW5BenAydTgvbi9tVWFBVEFTalA2RjlCeVBUL0lBTTllQVZVbStuUFJJNWZkWjRBcW5MMzFwRzIvbi9tVWFBMEFhakg2Ri9LemVuZjRJOEEzaUlEUlhrRlZJenB6N0ljem5JOEFaVGhkaTBvK2VYUFRSNEZhdkVFVUlQcFR5R09heFdlQUZibkxpM0wrditBUjRFU1BBRXN6ZlJmbHVuL0NnZDRjUUt3THBlSEJoempsWGtGdENKM1puSFcvN2Q0SGJRc1R3RExNZjBYOTNUNnAvMFJ3SXNjN0FVSndGcGNFaHB6dkZmakZkQXEzSTBTdlB6WnlldWdwWGdDV0lMcFg0THBQNG9EdndnQm1NOWxJSkJqdndLdmdHWnlCd3F4L2cvbmRkQjBuZ0NtTWYzaDRpSk1KUUJ6T1BTMXZMNysrdzdvQnE3RExBSXdnZU5laTVjL0ozQXBwaENBc3pub2NKT3JjVDRmQXAvSCthN0krbjhtSHd1ZnpCUEFTVXovaWt6L0tWeVcwd2pBR1J4b2VJc3JjdzRCT0p5alhKVDFmeTRYNXdRQ2NDeUhHRFp6Zlk0bUFBZHlmT3ZhdHY3N0k0RGhYS0pEQ2NCUkhOeTZ2UHhaaXF0MEhBRTRoQ01MQTdsUUJ4R0E4UnpXMHF6L2EzS3RqaUFBZ3ptbXBabitLM081aGhPQWtSeFFPSlFyTnBZQURPTm9WbWY5TDhGRkcwZ0F4bkFvNFRTdTJ5Z0NNSURqMk1EKzlkOGZBWnpKcFJ0Q0FQWnlFQnZ3OHFjaVYyOC9BZGpGRVlTSlhNQ2RCR0E3aDY4SDYzOXBydUVlQXJDUlk5ZUQ2ZCtBeTdpWkFHemh3TUZTWE1sdEJPQnRqbG9iMXY5T1hNd05CT0E5RGxrYnBuOC9ydWU3QkFBRzhFY0FWQ1FBYjdCZnRHSDk3OG9sZllzQXZNckJnaEpjMWRjSndFc2NxVTZzLysyNXNDOFNnT2NjcGs1TS94Q3U3U3NFNEFuSENJcHllWjhTQUlKWS8rRXpBWGpFQnRISmNkUGZkMENYNVFvL0pnQjNPVHJRZ0l2OGdBRGM1dEEwNCtWUE10ZjVIZ0VBQ0NVQU45Z1htckgrNDFMZkpBQmZPU2pObVA1Y3VkcmZDY0JQSEJGb3pBWC9RZ0RvelBvUER3akFQMndIelp3ei9mMFJRQzJ1K1djQzhEZkhBa0s0N0I4RTRISnhJRHJ5OG9jSFhQa3JBYUFoMHg5ZUlRQjJBVWprNGw4RXdDSG94L3JQaTF6LzlBQUF4SW9PZ1A3M1kvM25MZUZESURjQTRiLzRsczZmL3Y0SW9JSGtVWkFiQUlCd29RRklibjVYWHY2d1dleEFDQTBBelpqK3NFRmlBR0pyRDl5VE9SYmlBcEQ1YSs3TitzOFFnY01oTGdBQVhHVUZJTER3N1UxYy8zMEh0SiswRVpFVkFKcng4Z2YyQ0FwQVd0dUJEYUlHUlVvQW9uNnBJYXovSENSblhLUUVnR1pNZjlndklnQTVQUWVHQ0JrYUVRR2dHZXMvRE5FL0FDRWx6Mkg2YzQ2RTBkRS9BSEFFZndSQUE4MERrTkR3S05aL3p0UitnRFFQQUFEM2RBNUErM3Fuc2Y1enZ0NWpwSE1BNk1UMGgrSGFCcUIzdDRIVE5CNG1iUU5BSjlaL09FTFBBRFF1ZGlEVG4rbTZqcFNlQVlCRCtTTUFlbWdZZ0s2dHptVDlaeEV0QjB2REFBRHdpbTRCYUZucFdOWi9sdEp2dkhRTEFHMlkvbkMwVmdIbzEyZGdLYzJHVEtzQTBJYjFIMDRnQUN4bjhlbnZPNkMwMFNjQXpSN05nRFYxR2pWOUFrQVBpNi8vMEVtVEFIUnFNckM0TmdPblNRRG93Zm9QWitvUWdEWTFEbWY2VTBpUHNkTWhBQUJzSUFBc3dmb1A1eXNmZ0I0UFl1RUtUWDkvQk1DSEJzT25mQUFBMkVZQW1LelErZy9OMUE1QWcwZXdjS1kvcFZVZlFiVURBTUJtaFFOUXZiMVkvMm1nOUNBcUhBQUE5aEFBNXJEK3czUlZBMUQ2c1l1aTA5OGZBWEJUM1hGVU5RQUE3Q1FBbkszbytnLzlsQXhBM1FjdVRIOWFLanFVU2dZQWdQMEVnUE5ZLzJFcEFnQVFxbDRBaXI1cncvcFBieFZIVTcwQVVGR0Q2ZStQQU9oSEFBQkNGUXRBeFljc0dxei84SXB5QTZwWUFDakg5SWRsQ1FCQUtBSGdRTlovV0ZtbEFKUjd2eGJPOUNkUXJURlZLUUF3aSsrQTBwSUFjQWpyUDZ4UEFBQkNsUWxBclRkcjRhei9KQ3Mwck1vRWdDcE1mNmhDQUFCQ0NRQWpXZitoa0JvQktQUk9MWm5wRDFkVlJsYU5BTUJFL2dpQXJnU0FNYXovVUk0QUFJUVNBQWF3L2tORkJRSlE1ZU9VV0tZL2ZGZGljQlVJQUFCSEVBQjJzZjVEWFFMQWRxWS9sQ1lBOElnL0FxQXhBV0FqNno5VXQzb0FTbnlTSHNqMGg2ZldIMSsvenY0QllHbVpxZlBpSzhUcVR3QXNLSE1tNWpEOWN3Z0FRQ2dCNEQzVy85NnMvMUVFZ0RlWS9yMlovbWtFQUNEVTBnRlkvMHRVVWF6L3ZWbi9qN0Q0RUZzNkFLekQ5Ty9OOU04a0FBQ2hCSURuclArOVdmOWpDUUJFTS8yVENRQlBXUCtoS3dIZ0VkTy9OK3QvT0FHQVVLWS9Bc0JkMW4vb1RRQzR6ZlR2emZyUFJRQWdrT25QMWJvQldQeFBxSHV6L3NNb0s0K3lkUU1BSE1INnp3Y0I0Q3ZyZjJPbVA1OEpBRDh4L1NHSEFFQUs2ejlmQ0FEL3NQNDNadnJ6blFEd045TWYwZ2dBOUdmOTV5WUI0SEt4L3JkbStuT1BBR0Q2UXlnQmdNNnMvendnQU9tcy80MlovandtQUFDaEJDQ2E5Yjh4Nno5UENVQXUwNzh4MDU5WENBQkFLQUVJWmYxdnpQclBpd1Fna2VuZm1PblA2d1FBSUpRQXhMSCtOMmI5NXkwQ0FFMlkvcnhMQUxKWS80RVBBaERFOUcvTStzOEdBZ0RsbWY1c0l3QXByUC9BRjcvOC9zZWZzMytHMjM3NzhXUDJqMEFCd21iOVg5OS8vL3ByOW85d215Y0FLTXowWnc4Qm9ERHJQK3l4YmdDV2ZXaUNSVmovUzFoNWxLMGJBT0FCMDUvOUJBQWdsQUJBUGRaL2hoQUFLTWIwWnhRQm9DcGZBWUtkQkFBcXNmNHprQUJBR2FZL1l3a0FRQ2dCZ0Jxcy93d25BRkNBNmM4UmxnN0F5bjlDelZ4Ulh3RXkvZXRhZklndEhRQUFqaU1Bc0RUclA4Y1JBRmlYNmMraEJBQWdsQUJRVDhnbndOWi9qaVlBc0NMVG54T3NIb0RGdjBRRmNNLzY0MnYxQUVBZzZ6L25FQUJZaStuUGFRUUFJSlFBVUV6dnJ3Qlovem1UQU1BcVRIOU9WaUFBNjMrU0R2QkZpY0ZWSUFDUXdQclArUVFBNWpQOW1VSUFxS1QzSjhCd01nR0F5YXovekZJakFDVStUb0VOVFArV3FveXNHZ0VBWURnQmdHbXMvOHdsQURDSDZjOTBaUUpRNVowYXgvRVZJRW9vTkt6S0JBQTZzZjZ6QWdHQXM1bitMRUlBQUVKVkNrQ2hOMnR3ai9XL3QxcGpxbElBb0RyVG42VUlBRFg0Q2hBTUp3QndFdXMvcXlrV2dGcnYxK0NENlorZzNJQXFGZ0FBUmhFQU9KejFuelhWQzBDNWh5ejJLLzBKc09rZm91Sm9xaGNBQUlZUUFEaVE5WitWQ1FBY3hmUm5jU1VEVVBGZEc5QlkwYUZVTWdDd1B1cy82eE1BVmxmeEswQ21QeVZVRFVEUkJ5NmduN3JqcUdvQVlGbldmNm9RQUJqSjlLZVF3Z0dvKzlnRnRGRjZFQlVPQUFscWZRSnMvYWVXMmdFbzNWNmFNZjBEVlI5QnRRTUF3R1lDQUFOWS82bW9mQUNxUDRMUmdPbWZxY0h3S1I4QUFMWVJBTlpWNGl0QTFuL3E2aENBQmc5aUZHWDZ4K294ZGpvRUFJQU5tZ1NnUjQycHhmb2ZxODNBYVJJQU9KbnBUd045QXRDbXljREtPbzJhUGdHZ21aVy9BbVQ5cHdjQmdQZVkvclRSS2dDZEhzMkFCVFViTXEwQ0FFZXovdE5KdHdBMDZ6TkxNZjNEOVJzdjNRSkFEeXQvQWd4dE5BeEF2MHF6QXV0L3VKYURwV0VBWURqVG41WjZCcUJscTRGWnVvNlVuZ0dBZ2F6L2ROVTJBRjJMemNsTWZ4b1BrN1lCb0M1ZkFZSnpkQTVBNDI1ekR1cy92Y2RJNXdEQUhxWS83VFVQUU85NkE0ZHFQMENhQndDMnNmNlRvSDhBMmplYzRVeC9MaG1qbzM4QXFNVlhnT0EwRVFGSUtEbWpXUCs1eEF5TmlBREFpMHgvb3FRRUlLVG53SDQ1NHlJbEFKZWtYeXJiV1ArNWhBMktvQUN3dm9tZkFKditCTW9LUUZUYmdYZWxqWWlzQU1CTjFuOHl4UVVncmZBOFpmcHpGVGdjNGdKd2lmdzFBNDlsam9YRUFNQUg2ei9KUWdPUVdmdkZuZjhWSU5PZnE5aUJFQm9BQUhJREVOdDhycXovWENXUGd0d0FYTEovOGVGTWY2N0NoMEIwQUFDU3BRY2d2UC9yT1BNVFlPcy9WNjUvZWdBdURrRVkwNThyRi84aUFBQ3hCT0J5c1F2RXNQNXo1Y3BmQ2NEZkhJajJUSCt1WFBZUEF2QVB4d0xhYzgwL0V3RG1PK0VyUU5aLytFNEFmbUk3YU1uMDU4b0YvMElBdm5KRW9DVlgrenNCdU1GQjZjVDZ6OFdsdmtNQTZNejBod2NFNERiN0FyVGhPdDhqQUhjNU5PYzQ3aXRBMW44dUx2SkRBdkNJbzFPWDZjL0ZGWDVHQUFCQ0NjQVROb2lLclA5Y1hONFhDTUJ6amxFdHBqOFgxL1kxQXZBU2gra2d3ejhCTnYyNXVMQXZFNEJYT1ZKUWdxdjZPZ0Y0ZzRPMU9Pcy9MdWxiQklBbVRIOTRsd0M4eDM0QnkzSTkzeVVBYjNQSUZtVDl4OFhjUUFDMmNOU0dHUFVWSU5NZlYzSWJBZGpJZ1lORnVJeWJDY0IyanQwS3JQL2hYTU05QkdBWGgyOHUweitjQzdpVEFPemxDTUlVcnQ1K0FqQ0FnN2pCL2srQXJmL0pYTG9oQkdBTXgvRmtwbjh5MTIwVUFSakdvWVFUdUdnRENjQklqdVk1clAreFhMR3hCR0F3Qi9Sb3BuOHNsMnM0QVJqUE1ZWGhYS3NqQ01BaEhOYkhObjhGeVBxZnlZVTZpQUFjeFpFZHp2VFA1Q29kUndBTzVPRENUaTdSb1FUZ1dJN3ZLTmIvUUs3UDBRVGdjQTd4ZnFaL0lCZm5CQUp3QmtjWjN1TEtuRU1BVHVKQWYzajNLMERXL3pRdXkybCtuZjBEQkxrZTY5OSsvSmo5ZzFSaStrY3gray9tQ2VCc2pqamM1R3FjVHdBbWNOQmZaUDNQNFZKTUlRQnpPTzVQbWY0NVhJZFpCR0NhekVPLy83OERRek9aRjJFUlBnU2V5Y2ZDOTFqL0V4ajkwM2tDbU04MStNTDBUK0RZcjBBQWx1QXlFTVdCWDRSWFFLdndPdWpLK3QrYjBiOFVUd0JyQ2I4ZXBuOXY0Y2Q3UVFLd25NYVh4RmVBa2pVKzJIVjVCYlNpek5kQjF2K3VqUDVsZVFKWVY5UzFNZjI3aWpyRzVRakEwbHdlU25PQUYrY1YwT29TWGdkWi8vc3gra3Z3QkZCRGcrdDA3eE5nMDcrZkJzYzFoQ2VBTWhJZUJhak82Sy9GRTBBeHpTNlk5YitUWm9jemdTZUFldG84Q3BqK2JSajlSUWxBVlcweVFHbEdmMmxlQWRWVzkvcFoveHVvZS95NDhnUlFYb2xIZ1M5ZkFUTDlxelA2ZXhDQUprcGtnQWFNL2s2OEFtcWx4T1cwL3RkVjRvRHhPazhBM1N6K0tHRDZGMlgwdHlRQVBTMmVBUW94K2hzVGdNNVd5NEQxdnhhanZ6MEI2Rzk2QnE1ZkFUTDlDekg2UXdoQWl1a1pvQVNqUDRvQVpKbVZBZXYvK296K1FMLzgvc2VmczM4RzV2QTB3SlhSSDhzVFFDNHZoVEQ2d3dsQU9obklaUFJ6RVFDdVBzYUJFdlJtN3ZPWkFQQVREd1JkR2YxOEp3RGNJQU9kR1AzY0l3RGM1YjFRYWVZK1R3a0F6eWxCSWVZK3J4TUEzdURWME1xTWZ0NGxBTHpOQThGU3pIMDJFd0MyVTRLSnpIMzJFd0FHK0R5TXhPQTRoajVqQ1FDRGVTd1l6dHpuSUFMQVVUd1c3R0hvY3dJQjRBeGk4QXBEbjVNSkFHY1RnODhNZlNZU0FHYjZNdjRTZW1EaXN3NEJZQ0hmaDJQMUpCajNyRXdBV05yTkFicG1GY3g2eWhFQTZuazZhbzhvaFBsT1B3SkFRNFkxdk9KZnMzOEFBT1lRQUlCUUFnQVFTZ0FBUWdrQVFDZ0JBQWdsQUFDaEJBQWdsQUFBaEJJQWdGQUNBQkJLQUFCQ0NRQkFLQUVBQ0NVQUFLRUVBQ0NVQUFDRUVnQ0FVQUlBRUVvQUFFSUpBRUFvQVFBSUpRQUFvUVFBSUpRQUFJUVNBSUJRQWdBUVNnQUFRZ2tBUUNnQkFBZ2xBQUNoQkFBZ2xBQUFoQklBZ0ZBQ0FCQktBQUJDQ1FCQUtBRUFDQ1VBQUtFRUFDQ1VBQUNFRWdDQVVBSUFFRW9BQUVJSkFFQW9BUUFJSlFBQW9RUUFJSlFBQUlRU0FJQlEvdzhMa1NrWldaRkszUUFBQUFCSlJVNUVya0pnZ2c9PSIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIn1dfQ==">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Automatismes du jour — 2nde</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap');
+
+:root{
+  --bg:#16242A;
+  --bg-2:#1E2F35;
+  --line:rgba(241,238,228,0.10);
+  --chalk:#F1EEE4;
+  --chalk-dim:#AEBBB8;
+  --teal:#5FC3B5;
+  --teal-dim:#3A8B7F;
+  --amber:#E8B84B;
+  --paper:#FBF8F1;
+  --paper-line:#D8D2C0;
+  --ink:#22344A;
+  --ink-dim:#5B6B80;
+  --red-margin:#C1503F;
+  --success:#4C9A6B;
+  --success-bg:#DCEEE1;
+  --radius:14px;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--chalk);font-family:'Inter',sans-serif;min-height:100vh;}
+.wrap{max-width:640px;margin:0 auto;padding:0 0 4rem;}
+.topbar{padding:1.4rem 1.25rem 1rem;}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;}
+.brand .bolt{color:var(--amber);font-size:20px;}
+
+.hero{margin:0 1.25rem 1.25rem;background:var(--bg-2);border-radius:var(--radius);padding:1.3rem 1.4rem;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle, rgba(95,195,181,0.12), transparent 70%);}
+.hero .date{font-family:'Caveat',cursive;font-size:22px;color:var(--teal);margin:0 0 6px;}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:600;margin:0 0 12px;line-height:1.3;}
+.chips{display:flex;gap:8px;flex-wrap:wrap;}
+.chip{font-size:12px;padding:4px 11px;border-radius:20px;background:rgba(95,195,181,0.14);color:var(--teal);border:1px solid rgba(95,195,181,0.25);font-weight:500;}
+
+.section{margin:0 1.25rem 1.25rem;}
+.label{font-size:12.5px;text-transform:uppercase;letter-spacing:0.6px;color:var(--chalk-dim);margin:0 0 8px;font-weight:600;}
+
+.paper-card{
+  background-image:linear-gradient(var(--paper-line) 1px, transparent 1px),linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+  background-size:22px 22px;background-color:var(--paper);border-radius:10px;padding:1.4rem 1.4rem 1.4rem 2.2rem;
+  position:relative;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+.paper-card::before{content:"";position:absolute;left:1.5rem;top:0;bottom:0;width:1.5px;background:var(--red-margin);opacity:0.55;}
+.paper-card .type-badge{display:inline-block;font-family:'Space Grotesk',sans-serif;font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--ink-dim);margin-bottom:8px;}
+.paper-card .enonce{font-size:16.5px;line-height:1.55;font-weight:500;}
+
+.photo-zone{border:1.5px dashed var(--line);border-radius:12px;padding:1.4rem;text-align:center;cursor:pointer;transition:border-color .15s ease;}
+.photo-zone:hover{border-color:var(--teal-dim);}
+.photo-zone .icon{font-size:26px;color:var(--teal);margin-bottom:6px;}
+.photo-zone p{margin:0;font-size:13.5px;color:var(--chalk-dim);}
+.thumb{width:100%;border-radius:10px;margin-top:12px;max-height:280px;object-fit:contain;background:#0e1a1e;}
+
+.btn{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14.5px;padding:11px 18px;border-radius:9px;border:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .1s ease, opacity .15s ease;width:100%;}
+.btn:active{transform:scale(0.98);}
+.btn-primary{background:var(--teal);color:#0C2621;}
+.btn-primary:hover{background:#6FD0C2;}
+.btn-primary:disabled{opacity:0.5;cursor:not-allowed;}
+
+.correction-card{background:var(--success-bg);border-left:4px solid var(--success);border-radius:12px;padding:1.1rem 1.2rem;margin-top:1rem;color:#1E4A31;}
+.correction-card .cc-label{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14.5px;margin-bottom:6px;}
+.correction-card p{margin:0;font-size:14.5px;line-height:1.55;}
+
+.hidden{display:none !important;}
+
+.progress-row{display:flex;align-items:center;justify-content:center;margin-bottom:8px;}
+.progress-dots{display:flex;gap:6px;}
+.progress-dot{width:9px;height:9px;border-radius:50%;background:var(--line);}
+.progress-dot.done{background:var(--teal);}
+.progress-dot.current{background:var(--amber);}
+
+.done-card{background:var(--bg-2);border-radius:12px;padding:1.6rem 1.4rem;text-align:center;}
+.done-card .big{font-size:30px;margin-bottom:8px;}
+.done-card p{margin:0;color:var(--chalk-dim);font-size:14.5px;}
+
+.mode-toggle{display:flex;gap:8px;margin-bottom:12px;}
+.mode-toggle-btn{
+  flex:1;background:var(--bg-2);border:1.5px solid var(--line);color:var(--chalk-dim);
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13.5px;
+  padding:9px 8px;border-radius:9px;cursor:pointer;transition:all .15s ease;
+}
+.mode-toggle-btn.active{background:var(--teal);color:#0C2621;border-color:var(--teal);}
+textarea#textAnswer{
+  background:var(--bg-2);border:1px solid var(--line);color:var(--chalk);
+  border-radius:9px;padding:12px;font-size:14.5px;font-family:'Inter',sans-serif;
+  width:100%;min-height:90px;resize:vertical;
+}
+textarea#textAnswer:focus{outline:none;border-color:var(--teal-dim);}
+.auto-feedback{border-radius:12px;padding:1.1rem 1.2rem;margin-top:1rem;border-left:4px solid;}
+.auto-feedback.correct{background:var(--success-bg);border-color:var(--success);color:#1E4A31;}
+.auto-feedback.incorrect{background:#F6DEDA;border-color:#B7473A;color:#4A1D16;}
+.auto-feedback .af-status{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14.5px;margin-bottom:4px;}
+.auto-feedback .af-note{font-size:12.5px;opacity:0.8;margin:6px 0 0;}
+.your-answer{font-size:13.5px;color:var(--chalk-dim);margin:0 0 8px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand"><span class="bolt">&#9889;</span> Automatismes du jour</div>
+  </div>
+
+  <div class="hero">
+    <p class="date" id="dateLabel"></p>
+    <h1 id="heroTitle">C'est parti !</h1>
+    <div class="chips" id="heroChips"></div>
+  </div>
+
+  <div class="section hidden" id="quizArea">
+    <div class="progress-row">
+      <div class="progress-dots" id="progressDots"></div>
+    </div>
+
+    <div class="section" style="margin:0 0 1.25rem;">
+      <p class="label">La question</p>
+      <div class="paper-card" id="questionCard"></div>
+    </div>
+
+    <div class="section" style="margin:0 0 1.25rem;">
+      <p class="label">Ta réponse</p>
+      <div class="mode-toggle">
+        <button class="mode-toggle-btn active" id="modePhotoBtn" data-mode="photo">&#128247; Photo</button>
+        <button class="mode-toggle-btn" id="modeClavierBtn" data-mode="clavier">&#9000; Clavier</button>
+      </div>
+
+      <div id="photoInputArea">
+        <div class="photo-zone" id="photoZone">
+          <div class="icon">&#128247;</div>
+          <p>Prends en photo ta réponse manuscrite</p>
+          <input type="file" accept="image/*" capture="environment" id="photoInput" style="display:none">
+        </div>
+        <img id="thumb" class="thumb hidden">
+      </div>
+
+      <div id="textInputArea" class="hidden">
+        <textarea id="textAnswer" placeholder="Écris ta réponse ici..."></textarea>
+      </div>
+
+      <button class="btn btn-primary" id="revealBtn" style="margin-top:14px;" disabled>Voir la correction</button>
+    </div>
+
+    <div class="section hidden" style="margin:0;" id="correctionSection"></div>
+  </div>
+
+  <div class="section hidden" id="doneArea">
+    <div class="done-card">
+      <div class="big">&#127881;</div>
+      <p>Bravo, tu as terminé les questions du jour !</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/*
+  BANQUE DE QUESTIONS — 2nde
+  ----------------------------------------------------
+  Pour ajouter une question, copiez un bloc { ... } et modifiez le texte
+  entre guillemets. N'oubliez pas la virgule à la fin de chaque bloc,
+  sauf le tout dernier.
+
+  type    : "formule", "calcul" ou "definition"
+  theme   : le chapitre concerné (sert aussi à mélanger les thèmes)
+  niveau  : laissez "2de" (ce fichier est dédié à ce niveau)
+  enonce  : la consigne donnée à l'élève
+  reponse : la réponse affichée pour l'autocorrection
+
+  Chaque jour, l'appli choisit automatiquement 5 questions différentes,
+  en essayant de varier les thèmes, sans répéter celles des jours
+  précédents tant que la banque n'est pas épuisée.
+*/
+const QUESTIONS = [
+  {type:"calcul", theme:"Électricité - loi d'Ohm", niveau:"2de", enonce:"Un conducteur ohmique de résistance 220 Ω est traversé par un courant de 0,25 A. Calcule la tension à ses bornes.", reponse:"U = R×I = 220 × 0,25 = 55 V."},
+  {type:"definition", theme:"Optique", niveau:"2de", enonce:"Donne la définition d'une lentille convergente.", reponse:"Une lentille convergente est une lentille plus épaisse en son centre que sur les bords, qui fait converger (rapproche) un faisceau de rayons lumineux parallèles vers un point appelé foyer image."},
+  {type:"definition", theme:"Mécanique", niveau:"2de", enonce:"Donne la définition du principe d'inertie.", reponse:"Dans un référentiel galiléen, un objet soumis à des forces qui se compensent (ou à aucune force) est soit immobile, soit en mouvement rectiligne uniforme."},
+  {type:"definition", theme:"Chimie - réaction", niveau:"2de", enonce:"Donne la définition d'un réactif limitant.", reponse:"Le réactif limitant est le réactif totalement consommé le premier lors d'une transformation chimique ; il détermine la quantité maximale de produits formés."},
+  {type:"formule", theme:"Mécanique - poids", niveau:"2de", enonce:"Écris la relation entre le poids P, la masse m et l'intensité de pesanteur g.", reponse:"P = m × g, avec P en newtons (N), m en kilogrammes (kg), g en newtons par kilogramme (N/kg)."},
+  {type:"calcul", theme:"Mécanique - vitesse", niveau:"2de", enonce:"Une voiture parcourt 90 km en 1,5 h. Calcule sa vitesse moyenne en km/h.", reponse:"v = d / t = 90 / 1,5 = 60 km/h."},
+  {type:"formule", theme:"Mesures", niveau:"2de", enonce:"Écris la relation entre la masse volumique ρ, la masse m et le volume V.", reponse:"ρ = m / V, avec ρ en kg/m³ (ou g/cm³), m en kg (g), V en m³ (cm³)."},
+  {type:"definition", theme:"Constitution de la matière", niveau:"2de", enonce:"Donne la définition d'un atome.", reponse:"Un atome est constitué d'un noyau (protons et neutrons) entouré d'électrons ; il est électriquement neutre."},
+  {type:"calcul", theme:"Constitution de la matière", niveau:"2de", enonce:"Un noyau atomique contient 8 protons et 8 neutrons. Donne son nombre de masse A.", reponse:"A = Z + N = 8 + 8 = 16."},
+  {type:"formule", theme:"Mouvement", niveau:"2de", enonce:"Écris la relation entre la vitesse moyenne v, la distance d et la durée t.", reponse:"v = d / t, avec v en m/s, d en m, t en s."},
+  {type:"definition", theme:"Mouvement", niveau:"2de", enonce:"Donne la définition d'un référentiel.", reponse:"Un référentiel est un objet ou système d'objets par rapport auquel on étudie le mouvement d'un corps."},
+  {type:"calcul", theme:"Mouvement", niveau:"2de", enonce:"Un cycliste parcourt 12 km en 40 minutes. Calcule sa vitesse moyenne en km/h.", reponse:"v = d / t = 12 / (40/60) = 18 km/h."},
+  {type:"definition", theme:"Interactions", niveau:"2de", enonce:"Donne la définition d'une force de contact et d'une force à distance, avec un exemple de chacune.", reponse:"Une force de contact nécessite un contact entre les objets (ex : frottement) ; une force à distance agit sans contact (ex : force gravitationnelle)."},
+  {type:"calcul", theme:"Énergie", niveau:"2de", enonce:"Calcule l'énergie cinétique d'un objet de masse 0,5 kg se déplaçant à 4 m/s.", reponse:"Ec = ½×m×v² = 0,5 × 0,5 × 4² = 4 J."},
+  {type:"formule", theme:"Ondes - lumière", niveau:"2de", enonce:"Écris la relation entre la vitesse de la lumière dans le vide c, une distance d et une durée t.", reponse:"c = d / t, avec c ≈ 3×10⁸ m/s dans le vide."},
+  {type:"definition", theme:"Ondes - son", niveau:"2de", enonce:"Donne la définition d'un son pur.", reponse:"Un son pur est un son constitué d'une seule fréquence, représenté par une seule sinusoïde."},
+  {type:"calcul", theme:"Ondes - son", niveau:"2de", enonce:"Un son parcourt 680 m en 2 s. Calcule sa célérité.", reponse:"v = d / t = 680 / 2 = 340 m/s."},
+  {type:"formule", theme:"Électricité", niveau:"2de", enonce:"Écris la loi d'Ohm reliant la tension U, la résistance R et l'intensité I.", reponse:"U = R × I, avec U en volts (V), R en ohms (Ω), I en ampères (A)."},
+  {type:"calcul", theme:"Électricité", niveau:"2de", enonce:"Calcule l'intensité qui traverse une résistance de 50 Ω soumise à une tension de 10 V.", reponse:"I = U / R = 10 / 50 = 0,2 A."},
+  {type:"definition", theme:"Électricité", niveau:"2de", enonce:"Donne la définition de l'intensité du courant électrique.", reponse:"Grandeur qui traduit le débit de charges électriques traversant une section de circuit par unité de temps, mesurée en ampères (A)."},
+  {type:"formule", theme:"Chimie", niveau:"2de", enonce:"Écris la relation entre la concentration massique t, la masse de soluté m et le volume de solution V.", reponse:"t = m / V, avec t en g/L, m en g, V en L."},
+  {type:"calcul", theme:"Chimie", niveau:"2de", enonce:"On dissout 4 g de sel dans 200 mL d'eau. Calcule la concentration massique.", reponse:"t = m / V = 4 / 0,200 = 20 g/L."},
+  {type:"definition", theme:"Chimie", niveau:"2de", enonce:"Donne la définition d'une espèce chimique.", reponse:"Ensemble d'entités chimiques identiques (atomes, ions, molécules) caractérisées par la même formule chimique."},
+  {type:"calcul", theme:"Optique", niveau:"2de", enonce:"Une lentille convergente a une distance focale de 5 cm. Calcule sa vergence en dioptries.", reponse:"C = 1/f' = 1/0,05 = 20 δ (dioptries)."},
+  {type:"formule", theme:"Optique", niveau:"2de", enonce:"Écris la relation entre la vergence C et la distance focale f' d'une lentille.", reponse:"C = 1 / f', avec C en dioptries (δ), f' en mètres (m)."},
+  {type:"definition", theme:"Énergie", niveau:"2de", enonce:"Donne la définition de l'énergie cinétique.", reponse:"Énergie que possède un corps du fait de son mouvement ; elle dépend de sa masse et de sa vitesse."},
+  {type:"calcul", theme:"Constitution de la matière", niveau:"2de", enonce:"Un ion Na⁺ possède 11 protons. Combien d'électrons possède-t-il ?", reponse:"11 − 1 = 10 électrons (charge +1, donc un électron de moins que le nombre de protons)."},
+  {type:"formule", theme:"Mesures", niveau:"2de", enonce:"Écris la relation permettant de calculer une valeur moyenne à partir de n mesures.", reponse:"Valeur moyenne = (somme des valeurs mesurées) / n."},
+  {type:"definition", theme:"Ondes - lumière", niveau:"2de", enonce:"Donne la définition de la réfraction de la lumière.", reponse:"Changement de direction d'un rayon lumineux lorsqu'il traverse la surface séparant deux milieux transparents différents."},
+  {type:"calcul", theme:"Électricité", niveau:"2de", enonce:"Une résistance de 100 Ω est soumise à une tension de 6 V. Calcule l'intensité du courant.", reponse:"I = U / R = 6 / 100 = 0,06 A."},
+  {type:"definition", theme:"Mouvement", niveau:"2de", enonce:"Donne la définition de la trajectoire d'un objet en mouvement.", reponse:"La trajectoire est l'ensemble des positions successives occupées par un point de l'objet au cours du temps, dans un référentiel donné."},
+  {type:"formule", theme:"Automatismes maths - Formules littérales", niveau:"2de", enonce:"Dans la relation P = m × g, exprime m en fonction de P et g.", reponse:"m = P / g."},
+  {type:"formule", theme:"Automatismes maths - Formules littérales", niveau:"2de", enonce:"Dans la relation d = v × t, exprime t en fonction de d et v.", reponse:"t = d / v."},
+  {type:"calcul", theme:"Automatismes maths - Conversion d'unités", niveau:"2de", enonce:"Convertis 2,5 km en mètres.", reponse:"2,5 km = 2500 m."},
+  {type:"calcul", theme:"Automatismes maths - Conversion d'unités", niveau:"2de", enonce:"Convertis 350 g en kilogrammes.", reponse:"350 g = 0,350 kg."},
+  {type:"calcul", theme:"Automatismes maths - Conversion d'unités", niveau:"2de", enonce:"Convertis 45 minutes en secondes.", reponse:"45 min = 2700 s."},
+  {type:"calcul", theme:"Automatismes maths - Conversion d'unités", niveau:"2de", enonce:"Convertis 1,2 L en mL.", reponse:"1,2 L = 1200 mL."},
+  {type:"calcul", theme:"Automatismes maths - Puissances de 10", niveau:"2de", enonce:"Écris 0,000045 en notation scientifique.", reponse:"0,000045 = 4,5×10⁻⁵."},
+  {type:"calcul", theme:"Automatismes maths - Puissances de 10", niveau:"2de", enonce:"Écris 32000 en notation scientifique.", reponse:"32000 = 3,2×10⁴."},
+  {type:"calcul", theme:"Automatismes maths - Calcul à la calculatrice", niveau:"2de", enonce:"Donne l'ordre de grandeur de 8,9×10⁵.", reponse:"8,9 est proche de 10, donc l'ordre de grandeur est 10⁶."},
+  {type:"calcul", theme:"Automatismes maths - Calcul à la calculatrice", niveau:"2de", enonce:"Arrondis 12,678 à deux chiffres significatifs.", reponse:"12,678 arrondi à 2 chiffres significatifs donne 13."},
+  {type:"formule", theme:"Automatismes maths - Formules littérales", niveau:"2de", enonce:"Dans la relation ρ = m / V, exprime m en fonction de ρ et V.", reponse:"m = ρ × V."},
+  {type:"formule", theme:"Automatismes maths - Formules littérales", niveau:"2de", enonce:"Dans la relation t = m / V (concentration massique), exprime V en fonction de t et m.", reponse:"V = m / t."},
+  {type:"calcul", theme:"Automatismes maths - Conversion d'unités", niveau:"2de", enonce:"Convertis 3,2 m en cm.", reponse:"3,2 m = 320 cm."},
+  {type:"calcul", theme:"Automatismes maths - Conversion d'unités", niveau:"2de", enonce:"Convertis 500 mg en g.", reponse:"500 mg = 0,5 g."},
+  {type:"calcul", theme:"Automatismes maths - Conversion d'unités", niveau:"2de", enonce:"Convertis 2 h 30 min en secondes.", reponse:"2 h 30 min = 150 min = 9000 s."},
+  {type:"formule", theme:"Automatismes maths - Formules littérales", niveau:"2de", enonce:"Dans la relation U = R × I, exprime I en fonction de U et R.", reponse:"I = U / R."}
+];
+
+const MAX_PER_DAY = 5;
+const typeLabels = {formule:'Formule', calcul:'Calcul', definition:'Définition'};
+
+function todayHuman(){
+  return new Date().toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long'});
+}
+document.getElementById('dateLabel').textContent = "Aujourd'hui, " + todayHuman();
+
+// Regroupe les questions par thème puis les ré-intercale (thème A, B, C, A, B, C...)
+// pour éviter que 5 questions consécutives viennent toutes du même chapitre.
+function interleaveByTheme(pool){
+  const groups = {};
+  const order = [];
+  pool.forEach(q => {
+    if(!groups[q.theme]){ groups[q.theme] = []; order.push(q.theme); }
+    groups[q.theme].push(q);
+  });
+  const result = [];
+  let idx = 0;
+  let added = true;
+  while(added){
+    added = false;
+    for(const key of order){
+      if(groups[key][idx]){
+        result.push(groups[key][idx]);
+        added = true;
+      }
+    }
+    idx++;
+  }
+  return result;
+}
+
+// Choisit un bloc de 5 questions différent chaque jour, sans chevauchement
+// d'un jour à l'autre, en parcourant toute la banque avant de recommencer.
+function getTodayQuestions(){
+  const pool = interleaveByTheme(QUESTIONS);
+  if(pool.length === 0) return [];
+  const epoch = new Date(2026, 0, 1);
+  const now = new Date();
+  const days = Math.floor((now - epoch) / 86400000);
+  const numBlocks = Math.max(1, Math.ceil(pool.length / MAX_PER_DAY));
+  const block = ((days % numBlocks) + numBlocks) % numBlocks;
+  const start = block * MAX_PER_DAY;
+  const count = Math.min(MAX_PER_DAY, pool.length);
+  const result = [];
+  for(let i = 0; i < count; i++){
+    result.push(pool[(start + i) % pool.length]);
+  }
+  return result;
+}
+
+let todayQuestions = [];
+let currentIndex = 0;
+
+const quizArea = document.getElementById('quizArea');
+const doneArea = document.getElementById('doneArea');
+const heroTitle = document.getElementById('heroTitle');
+const heroChips = document.getElementById('heroChips');
+
+function start(){
+  todayQuestions = getTodayQuestions();
+  currentIndex = 0;
+  if(todayQuestions.length === 0){
+    heroTitle.textContent = "Pas encore de question disponible.";
+    return;
+  }
+  quizArea.classList.remove('hidden');
+  heroTitle.textContent = "C'est parti !";
+  heroChips.innerHTML = `<span class="chip">2nde</span><span class="chip">${todayQuestions.length} question${todayQuestions.length>1?'s':''} aujourd'hui</span>`;
+  renderProgressDots();
+  renderQuestion();
+}
+
+function renderProgressDots(){
+  const dots = document.getElementById('progressDots');
+  dots.innerHTML = todayQuestions.map((_, i) => {
+    let cls = 'progress-dot';
+    if(i < currentIndex) cls += ' done';
+    else if(i === currentIndex) cls += ' current';
+    return `<span class="${cls}"></span>`;
+  }).join('');
+}
+
+const photoZone = document.getElementById('photoZone');
+const photoInput = document.getElementById('photoInput');
+const thumb = document.getElementById('thumb');
+const revealBtn = document.getElementById('revealBtn');
+const photoInputArea = document.getElementById('photoInputArea');
+const textInputArea = document.getElementById('textInputArea');
+const modePhotoBtn = document.getElementById('modePhotoBtn');
+const modeClavierBtn = document.getElementById('modeClavierBtn');
+const textAnswer = document.getElementById('textAnswer');
+let answerMode = 'photo';
+
+modePhotoBtn.addEventListener('click', () => setAnswerMode('photo'));
+modeClavierBtn.addEventListener('click', () => setAnswerMode('clavier'));
+
+function setAnswerMode(mode){
+  answerMode = mode;
+  modePhotoBtn.classList.toggle('active', mode === 'photo');
+  modeClavierBtn.classList.toggle('active', mode === 'clavier');
+  photoInputArea.classList.toggle('hidden', mode !== 'photo');
+  textInputArea.classList.toggle('hidden', mode !== 'clavier');
+  updateRevealState();
+}
+
+function updateRevealState(){
+  if(answerMode === 'photo'){
+    revealBtn.disabled = !(thumb.src && !thumb.classList.contains('hidden'));
+  }else{
+    revealBtn.disabled = textAnswer.value.trim().length === 0;
+  }
+}
+textAnswer.addEventListener('input', updateRevealState);
+
+function parseNumberFromText(text){
+  if(!text) return null;
+  const fracMatch = text.match(/(-?\d+)\s*\/\s*(\d+)/);
+  if(fracMatch){
+    const den = parseFloat(fracMatch[2]);
+    if(den !== 0) return parseFloat(fracMatch[1]) / den;
+  }
+  const decMatch = text.match(/-?\d+(?:[.,]\d+)?/);
+  if(decMatch) return parseFloat(decMatch[0].replace(',', '.'));
+  return null;
+}
+
+function extractExpectedNumber(reponseText){
+  const lastEq = reponseText.lastIndexOf('=');
+  const snippet = lastEq >= 0 ? reponseText.slice(lastEq + 1) : reponseText;
+  return parseNumberFromText(snippet);
+}
+
+function isClose(a, b){
+  const tol = Math.max(0.01, Math.abs(b) * 0.02);
+  return Math.abs(a - b) <= tol;
+}
+
+function renderQuestion(){
+  const q = todayQuestions[currentIndex];
+  document.getElementById('questionCard').innerHTML = `<span class="type-badge">${typeLabels[q.type]||q.type} · Question ${currentIndex+1}/${todayQuestions.length}</span><p class="enonce">${q.enonce}</p>`;
+  thumb.classList.add('hidden');
+  thumb.src = '';
+  photoInput.value = '';
+  textAnswer.value = '';
+  revealBtn.disabled = true;
+  revealBtn.textContent = 'Voir la correction';
+  document.getElementById('correctionSection').classList.add('hidden');
+  document.getElementById('correctionSection').innerHTML = '';
+  renderProgressDots();
+}
+
+photoZone.addEventListener('click', () => photoInput.click());
+photoInput.addEventListener('change', () => {
+  if(photoInput.files && photoInput.files[0]){
+    thumb.src = URL.createObjectURL(photoInput.files[0]);
+    thumb.classList.remove('hidden');
+    updateRevealState();
+  }
+});
+
+revealBtn.addEventListener('click', () => {
+  const q = todayQuestions[currentIndex];
+  const isLast = currentIndex === todayQuestions.length - 1;
+  let blockHtml = '';
+
+  if(answerMode === 'clavier' && q.type === 'calcul'){
+    const expected = extractExpectedNumber(q.reponse);
+    const studentVal = parseNumberFromText(textAnswer.value);
+    if(expected !== null && studentVal !== null){
+      const correct = isClose(studentVal, expected);
+      blockHtml = `
+        <p class="your-answer">Ta réponse : « ${textAnswer.value.trim()} »</p>
+        <div class="auto-feedback ${correct ? 'correct' : 'incorrect'}">
+          <p class="af-status">${correct ? '&#10003; Correct' : '&#10005; À revoir'}</p>
+          <p>${q.reponse}</p>
+          <p class="af-note">Vérification automatique sur la valeur numérique — relis le corrigé complet ci-dessus pour t'assurer d'avoir bien tout justifié.</p>
+        </div>`;
+    }else{
+      blockHtml = `
+        <p class="your-answer">Ta réponse : « ${textAnswer.value.trim()} »</p>
+        <div class="correction-card"><p class="cc-label">Compare avec ta réponse</p><p>${q.reponse}</p></div>`;
+    }
+  }else if(answerMode === 'clavier'){
+    blockHtml = `
+      <p class="your-answer">Ta réponse : « ${textAnswer.value.trim()} »</p>
+      <div class="correction-card"><p class="cc-label">Compare avec ta réponse</p><p>${q.reponse}</p></div>`;
+  }else{
+    blockHtml = `<div class="correction-card"><p class="cc-label">Compare avec ta réponse</p><p>${q.reponse}</p></div>`;
+  }
+
+  document.getElementById('correctionSection').innerHTML = `
+    <p class="label">Corrigé</p>
+    ${blockHtml}
+    <button class="btn btn-primary" id="nextBtn" style="margin-top:12px;">${isLast ? 'Terminer' : 'Question suivante'}</button>
+  `;
+  document.getElementById('correctionSection').classList.remove('hidden');
+  revealBtn.disabled = true;
+  revealBtn.classList.add('hidden');
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    revealBtn.classList.remove('hidden');
+    if(isLast){
+      currentIndex++;
+      renderProgressDots();
+      quizArea.classList.add('hidden');
+      doneArea.classList.remove('hidden');
+      heroTitle.textContent = 'Terminé pour aujourd\'hui';
+    }else{
+      currentIndex++;
+      renderQuestion();
+    }
+  });
+});
+
+start();
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
+</script>
+</body>
+</html>
