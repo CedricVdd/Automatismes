@@ -1,6 +1,6 @@
 {
-  "name": "Atome",
-  "short_name": "Atome",
+  "name": "Atome[@home]",
+  "short_name": "@[h]ome",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#16242A",
