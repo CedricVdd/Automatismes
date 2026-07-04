@@ -1,7 +1,9 @@
+</>JSON
 {
   "name": "Atome[@home]",
   "short_name": "@[h]ome",
-  "start_url": "./",
+  "start_url": "/ATOME/tle.html",
+  "scope": "/ATOME/",
   "display": "standalone",
   "background_color": "#16242A",
   "theme_color": "#16242A",
