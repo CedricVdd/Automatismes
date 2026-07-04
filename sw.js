@@ -1,4 +1,4 @@
-const CACHE_NAME = 'automatismes-cache-v1';
+const CACHE_NAME = 'atome-cache-v1';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
